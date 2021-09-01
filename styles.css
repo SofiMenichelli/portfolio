@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+:root  {
+    --a: black;
+    --pastel: #CEF299;
+    --verdeClaro: #9CD95F;
+    --manzana: #7ED923;
+    --pasto: #2D730D;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+
+body {
+    background: var(--pastel);
+    height: 100vh;
+    font-family: 'Indie Flower', cursive;
+}
+/* Header - Nav */
+header{
+    height: 10%;
+    background-color: var(--manzana);
+    position: sticky;
+    top: 0;
+}
+nav {
+    width: 50%;
+}
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    align-self: center;
+}
+li {
+    list-style: none;
+    text-decoration: none;
+}
+li > a {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+/* Main */
+.contenedor {
+    height: 75%;
+    overflow: auto;
+    margin: 2rem auto;
+    width:90%;
+    overflow:auto;
+    box-sizing: border-box;
+    padding:0 1rem;
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.contenedor::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.contenedor::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.contenedor::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.contenedor::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.contenedor::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+/* Sobre Mi */
+.sobreMi {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sobreMi > .img {
+    width: 300px;
+    height: 300px;
+    background-image: url("img/sofi.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+.sobreMi > .info {
+    width: 60%
+}
+
+/* Portafolio */
+.social {
+	position: fixed; 
+	left: 0; 
+	top: 200px; 
+	z-index: 10; 
+    background: #000;
+}
+
+.social ul li a {
+    display: inline-block;
+    color:#fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    -webkit-transition:all 500ms ease;
+    -o-transition:all 500ms ease;
+    transition:all 500ms ease; 
+}
+
+.social ul li .facebook:hover {
+    background:#0d52e7;
+}
+.social ul li .github:hover {
+    background: negro; color: white;
+}
+.social ul li .linkedin:hover {
+    background: #205ac4; color: white;
+}
+.social ul li .envelope:hover {
+    background: #ae181f;
+}
+
+.social ul li a:hover {
+    background: #000; 
+    padding: 10px 30px; 
+}
+
+.portfolio {
+    width: 90%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.portfolio > div {
+    width: 300px;
+    height: calc(300px - 50%);
+    border-radius: 25px;
+    border: 1px solid rgb(59, 59, 240);
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.portfolio > div:hover {
+    
+}
+
+/* Footer */
+footer {
+    height: 5%;
+    position:sticky;
+    bottom: 0;
+    background-color: pink;
+}
+footer > small {
+    text-align: center;
+}
+/* .social-buttons {
+	height: 50px;
+	font-size: 10;
+	text-align: center;
+}
+
+.social-button {
+	display: inline-block;
+	background-color: #fff;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	margin-left: 0 !important;
+	margin-right: 15px !important;
+    margin-top: 15px !important;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	opacity: .99;
+	border-radius: 50%;
+	box-shadow: 0 0 30px 0 rgba(0,0,0,0.06);
+	-webkit-transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.59);
+	transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.59);
+}
+
+.social-button:before {
+	content: '';
+	background-color: #000;
+	width: 120%;
+	height: 120%;
+	position: absolute;
+	top: 90%;
+	left: -110%;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.79);
+	transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.79);
+}
+
+.social-button .fa {
+	font-size: 28px;
+	vertical-align: middle;
+	-webkit-transform: scale(0.75);
+	-ms-transform: scale(0.75);
+	transform: scale(0.75);
+	-webkit-transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.59);
+	transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.59);
+}
+
+.social-button.facebook:before {
+	background-color: black;
+}
+
+.social-button.facebook .fa {
+	color: black;
+}
+
+.social-button.instagram:before {
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5849dc 45%, #d6249ecb 60%, #2859ebd5 90%);
+ 
+}
+
+.social-button.instagram .fa {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          Also define standard property for compatibility
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.social-button.google:before {
+	background-color: #DC4A38;
+}
+
+.social-button.google .fa {
+	color: #DC4A38;
+}
+
+.social-button.linkedin:before {
+	background-color: #0e76a8;
+}
+
+.social-button.linkedin .fa {
+	color: #0e76a8;
+}
+
+.social-button.skype:before {
+	background-color: #00AFF0;
+}
+
+.social-button.skype .fa {
+	color: #00AFF0;
+}
+
+.social-button:hover:before {
+	top: -10%;
+	left: -10%;
+}
+
+.social-button:hover .fa {
+	color: #fff;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+.social-button:focus {
+	opacity: .85;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	color: inherit;
+	box-sizing: inherit;
+}
+
+:focus {
+	outline: none;
+} */
