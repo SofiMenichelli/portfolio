@@ -1,114 +1,184 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 :root  {
-    --a: black;
-    --pastel: #CEF299;
-    --verdeClaro: #9CD95F;
-    --manzana: #7ED923;
-    --pasto: #2D730D;
-
+    --negro: black;
+    --gris: #D7D7D9;
+    --azul: #184059;
+    --celeste: #608BA6;
+    --naranja: #BF7B3F;
+    --bordo: #8C2F1B;
+    
 }
+
 * {
     margin: 0;
     padding: 0;
 }
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-    background: var(--pastel);
-    height: 100vh;
+    background-image: url(img/bg-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: linear-gradient(45deg, var(--azul), var(--bordo), var(--celeste), var(--naranja), var(--gris)); */
     font-family: 'Indie Flower', cursive;
-}
-/* Header - Nav */
-header{
-    height: 10%;
-    background-color: var(--manzana);
-    position: sticky;
-    top: 0;
-}
-nav {
-    width: 50%;
-}
-nav > ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    text-align: center;
-    align-self: center;
-}
-li {
-    list-style: none;
-    text-decoration: none;
-}
-li > a {
-    font-size: 1.5em;
-    margin-top: 15px;
+    overflow: hidden;
 }
 
+/* Nav */
+.nav {
+    background-color: rgba(247, 59, 206, 0.753);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    height: 100%;
+    padding: 5px;
+}
+.nav > li:hover {
+    background-color: rgba(245, 17, 195, 0.747);
+}
+
+li {
+    list-style: none;
+}
+li > img {
+    border-radius: 10px;
+}
+li > .navA {
+    color: rgba(8, 8, 8, 0.698);
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-size: 1.5em;
+    margin-top: 15px;
+    display: inline-block;
+    position: relative;
+    color: #333;
+    text-decoration: none;
+    transition: all .5s ease;
+    transform-style: preserve-3d;
+}
+li > .navA:after {
+    content: "Go!";
+    position: absolute;
+    top: -100%;
+    left: 0px;
+    width: 100%;
+    background: rgb(192, 16, 236);
+    color: white;
+    transform-origin: left bottom;
+    transform: rotateX(90deg);
+}
+li > .navA:hover {
+    transform-origin: center bottom;
+    transform: rotateX(-90deg) translateY(100%);
+}
+
+
 /* Main */
-.contenedor {
-    height: 75%;
+
+.container {
+    
     overflow: auto;
-    margin: 2rem auto;
-    width:90%;
-    overflow:auto;
     box-sizing: border-box;
-    padding:0 1rem;
+    height:  90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
 
-.contenedor::-webkit-scrollbar {
+.container::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
-.contenedor::-webkit-scrollbar:vertical {
+.container::-webkit-scrollbar:vertical {
     width:10px;
 }
 
-.contenedor::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+.container::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
     display: none;
 } 
 
-.contenedor::-webkit-scrollbar:horizontal {
+.container::-webkit-scrollbar:horizontal {
     height: 10px;
 }
 
-.contenedor::-webkit-scrollbar-thumb {
+.container::-webkit-scrollbar-thumb {
     background-color: #797979;
     border-radius: 20px;
     border: 2px solid #f1f2f3;
 }
 
-.contenedor::-webkit-scrollbar-track {
+.container::-webkit-scrollbar-track {
     border-radius: 10px;  
 }
 
+.descripcion {
+    background-color:var(--verdeClaro);
+    border-radius: 25px;
+}
+
 /* Sobre Mi */
-.sobreMi {
+
+.img {
+    width: 300px;
+    height: 300px;
+    background-image: url("img/sofiCV.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    align-self: center;
+    margin-top: 2vh;
+}
+#tit{
+    font-size: 3rem;
+}
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+h1{
+    color: rgba(8, 8, 8, 0.698);
+    letter-spacing: 2px;
+    font-size: 4em;
+    font-weight: 800;
+    text-align: center; 
+    flex-grow: 1;
+}
+p {
+    color: rgba(8, 8, 8, 0.698);
+    letter-spacing: 2px;
+    font-weight: 800;
+    width: 80%;
+    text-align: center;
+    font-size: 1.5em;
+    margin: auto;
+    padding: 2rem;
+}
+/* #subTit{
+    font-size: 2rem;
+} */
+
+.aboutMe {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 }
-.sobreMi > .img {
-    width: 300px;
-    height: 300px;
-    background-image: url("img/sofi.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-}
-.sobreMi > .info {
-    width: 60%
-}
 
 /* Portafolio */
+
 .social {
 	position: fixed; 
-	left: 0; 
+	right: 0; 
 	top: 200px; 
 	z-index: 10; 
     background: #000;
@@ -117,180 +187,130 @@ li > a {
 .social ul li a {
     display: inline-block;
     color:#fff;
-    padding: 10px 15px;
+    padding: 10px 10px;
     text-decoration: none;
     -webkit-transition:all 500ms ease;
     -o-transition:all 500ms ease;
     transition:all 500ms ease; 
 }
 
-.social ul li .facebook:hover {
-    background:#0d52e7;
-}
-.social ul li .github:hover {
-    background: negro; color: white;
-}
-.social ul li .linkedin:hover {
-    background: #205ac4; color: white;
-}
 .social ul li .envelope:hover {
-    background: #ae181f;
-}
-
-.social ul li a:hover {
     background: #000; 
     padding: 10px 30px; 
 }
-
-.portfolio {
-    width: 90%;
-    height: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+.social ul li .linkedin:hover {
+    background: #000; 
+    padding: 10px 30px; 
+}.social ul li .github:hover {
+    background: #000; 
+    padding: 10px 30px; 
+}
+/* Carousel */
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    box-shadow: #184059;
+}
+a > img {
+    margin: auto;
+    width: 80%;
+}
+.fade:hover {
+    background-color: rgba(51, 51, 51, 0.63);
+    content: "GO TO SEE THE PAGE";
+    z-index: 1000;
 }
 
-.portfolio > div {
-    width: 300px;
-    height: calc(300px - 50%);
-    border-radius: 25px;
-    border: 1px solid rgb(59, 59, 240);
-    margin-right: 50px;
-    margin-top: 50px;
+/* Contact Me */
+.form {
+  width: 50%;
+  background: #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: auto;
+  padding: 20px 30px;
+
 }
-.portfolio > div:hover {
-    
+.form legend {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 180px;
+  color: #78788c;
+  border-bottom: 3px solid #78788c;
+  font-size: 2em;
 }
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  /* font-family: "Montserrat", sans-serif; */
+  transition: all 0.3s;
+  border-bottom: 2px solid #bebed2;
+    font-size: 0.8em;
+}
+.form input:focus {
+  border-bottom: 2px solid #78788c;
+}
+.form label:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 1em;
+  color: #5a5a5a;
+}
+.form button {
+  border: 2px solid #78788c;
+  background: 0;
+  color: #5a5a6e;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 5px;
+  width: 20%;
+  align-self: flex-end;
+}
+.form button:hover {
+  background: #78788c;
+  color: #fff;
+}
+
 
 /* Footer */
 footer {
-    height: 5%;
-    position:sticky;
-    bottom: 0;
-    background-color: pink;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--gris);
+    position: fixed;
+    bottom:  0;
 }
-footer > small {
+footer > p {
     text-align: center;
+    font-size: 20px;
+    font-weight: bold;
 }
-/* .social-buttons {
-	height: 50px;
-	font-size: 10;
-	text-align: center;
+footer div {
+  content: "Hi";
+  width: 50%;
+  font-size: 1em;
 }
-
-.social-button {
-	display: inline-block;
-	background-color: #fff;
-	width: 50px;
-	height: 50px;
-	line-height: 50px;
-	margin-left: 0 !important;
-	margin-right: 15px !important;
-    margin-top: 15px !important;
-	text-align: center;
-	position: relative;
-	overflow: hidden;
-	opacity: .99;
-	border-radius: 50%;
-	box-shadow: 0 0 30px 0 rgba(0,0,0,0.06);
-	-webkit-transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.59);
-	transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.59);
+footer a {
+    text-decoration: none;
 }
 
-.social-button:before {
-	content: '';
-	background-color: #000;
-	width: 120%;
-	height: 120%;
-	position: absolute;
-	top: 90%;
-	left: -110%;
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
-	-webkit-transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.79);
-	transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.79);
+footer span {
+    border: 2px dashed gray;
+    border-radius: 6px;
+    margin: 0 5px 0 15px;
+    align-self: center;
+    padding: 5px;
+    font-family: 'Indie Flower', cursive;
 }
-
-.social-button .fa {
-	font-size: 28px;
-	vertical-align: middle;
-	-webkit-transform: scale(0.75);
-	-ms-transform: scale(0.75);
-	transform: scale(0.75);
-	-webkit-transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.59);
-	transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.59);
+span > i {
+    padding: 5px;
+    font-weight: bold;
+    color:  black
 }
-
-.social-button.facebook:before {
-	background-color: black;
-}
-
-.social-button.facebook .fa {
-	color: black;
-}
-
-.social-button.instagram:before {
-	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5849dc 45%, #d6249ecb 60%, #2859ebd5 90%);
- 
-}
-
-.social-button.instagram .fa {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  -webkit-background-clip: text;
-          Also define standard property for compatibility
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.social-button.google:before {
-	background-color: #DC4A38;
-}
-
-.social-button.google .fa {
-	color: #DC4A38;
-}
-
-.social-button.linkedin:before {
-	background-color: #0e76a8;
-}
-
-.social-button.linkedin .fa {
-	color: #0e76a8;
-}
-
-.social-button.skype:before {
-	background-color: #00AFF0;
-}
-
-.social-button.skype .fa {
-	color: #00AFF0;
-}
-
-.social-button:hover:before {
-	top: -10%;
-	left: -10%;
-}
-
-.social-button:hover .fa {
-	color: #fff;
-	-webkit-transform: scale(1);
-	-ms-transform: scale(1);
-	transform: scale(1);
-}
-
-.social-button:focus {
-	opacity: .85;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-	color: inherit;
-	box-sizing: inherit;
-}
-
-:focus {
-	outline: none;
-} */

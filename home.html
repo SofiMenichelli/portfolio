@@ -5,89 +5,158 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menichelli Sofia MV</title>
-    <!-- Hoja de estilos home -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <!-- Iconos redes sociales -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Hoja de estilos home -->
+    <link rel="stylesheet" href="styles.css">
+
 
 </head>
 <body>
-    <header>
-        <div class="imgPerfil">           
-        </div>
-        <nav>
-            <ul>
-                <li><a name="#">Menichelli Sofia MV</a></li>
-                <li><a name="sobreMi">Sobre Mi</a></li>
-                <li><a name="portafolio">Portafolio</a></li>
-                <li><a name="contacto">Contactame</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="contenedor">
-
-        <!-- SOBRE MI -->
+    
+    <ul class="nav">
+        <li class="navA"><img src="img/SM.jpg" alt="" width="50px""></li>
+        <li><a class="navA" href="#aboutMe">About Me</a></li>
+        <li><a class="navA" href="#portfolio">Portfolio</a></li>
+        <li><a class="navA" href="#contact">Contact</a></li>
+    </ul>
+    <main class="container">
         
-        <div id="sobreMi" class="sobreMi">
+        <!-- SOBRE MI -->
+        <div class="tit d-flex flex-column align-center">
             <div class="img"></div>
-            <div class="info">
-                <h1>Desarrolladora Web <span>-</span> Full Stack Java</h1>
-            </div>
+            <h1 id="tit">Sofia MV Menichelli</h1>
+            <h1 id="subTit">Developer Web Full Stack Java</h1>
         </div>
-
-        <!-- PORTAFOLIO -->
-
+        <div class="tit mt-5">
+            <h1 class="fs-2">¿Te gustaría tener en tu equipo una persona que trabaje con la convicción de un emprendedor?</h1>
+        </div>
+        <div class="info">
+            <p>Soy Sofia Menichelli, Desarrolladora Web Full Stack Java, me desempeño muy bien trabajando en equipo, siempre termino
+                mis objetivos antes de tiempo y me destaco en lo que hago. Soy responsable, proactiva, detallista, con capacidad
+                para adaptarme el cambio y de rápido aprendizaje. Deseo trabajar en una empresa en la que tenga posibilidades de
+                crecimiento y aprendizaje, que se valore el trabajo y me permita seguir aprendiendo. Contactame!!!</p>
+        </div>
+    
+        <hr>
         <!-- Links redes sociales -->
         <div class="social">
             <ul>
-                <li><a href="mailito:smenichelli@hotmail.com" target="_blank" class="fa fa-envelope"></a></li>
-                <li><a href="http://www.pinterest.com/falconmasters" target="_blank" class="fa fa-linkedin"></a></li>
-                <li><a href="http://www.twitter.com/falconmasters" target="_blank" class="fa fa-github"></a></li>
-                <li><a href="http://www.facebook.com/falconmasters" target="_blank" class="fa fa-facebook"></a></li>
+                <li style="color:white; font-size:1.5rem">Go!</li>
+                <li><a href="mailto:smenichelli@hotmail.com" target="_blank" class="fa fa-envelope"></a></li>
+                <li><a href="https://www.linkedin.com/in/sofimenichelli/" target="_blank" class="fa fa-linkedin"></a></li>
+                <li><a href="https://github.com/SofiMenichelli" target="_blank" class="fa fa-github"></a></li>
+                <!-- <li><a href="http://www.facebook.com/" target="_blank" class="fa fa-facebook"></a></li> -->
                 <!-- <li><a href="mailto:contacto@falconmasters.com" class="icon-mail"></a></li> -->
             </ul>
         </div>
 
-        <div id="portafolio" class="portfolio">
-
-            <div class="liga">
-                <a href="#"><img src="" alt=""></a>
+        <!-- Portfolio - Carousel -->
+        
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
-            <div class="senadores">
-                <a href="https://sofimenichelli.github.io/tgif-vue/"><img src="" alt=""></a>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="https://lollapalooza-mindhub.herokuapp.com/index.html" target="_blank">
+                        <img src="img/imagen-5.jpg" class="d-block w-75" alt="Lollapalooza">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block mt-5">
+                        <h5>Lollapalooza</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://homebanking-sofi.herokuapp.com/web/index.html" target="_blank">
+                        <img src="img/imagen-4.jpg" class="d-block w-75" alt="Homebanking">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block mt-5">
+                        <h5>Homebanking ING Bank</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://sofimenichelli.github.io/PetShop/" target="_blank">
+                        <img src="img/imagen-3.jpg" class="d-block w-75" alt="Pet-Shop">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block mt-5">
+                        <h5>Pet-Shop Franco</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://sofimenichelli.github.io/TGIF-VUE/" target="_blank">
+                        <img src="img/imagen-2.jpg" class="d-block w-75" alt="Senadores y congresistas">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block mt-5">
+                        <h5>TGIF</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://sofimenichelli.github.io/NYSL/" target="_blank">
+                        <img src="img/imagen-1.jpg" class="d-block w-75" alt="Liga de Hockey">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block mt-5">
+                        <h5>Liga de Hockey</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
             </div>
-            <div class="pet">
-                <a href="https://sofimenichelli.github.io/petshop/"><img src="" alt=""></a>
-            </div>
-            <div class="lolla">
-                <a href="https://lollapalooza-mindhub.herokuapp.com/index.html"><img src="" alt=""></a>
-            </div>
-            <div class="home">
-                <a href="https://mighty-spire-85103.herokuapp.com/web/index.html"><img src="" alt=""></a>
-            </div>
-
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-
         <!-- CONTACTO -->
+        <form class="form d-flex flex-column m-5">
+            <legend>Contact Me</legend>
+            <label for="email"><input name="email" type="email" placeholder="Email"></label>
+            <label for="name"><input name="name" type="text" placeholder="Name"></label>
+            <label for="number"><input name="number" type="number" placeholder="Cell phone number"></label>
+            <label for="message"><input name="message" type="message" placeholder="Why contact me?"></label>
+            <button class="m-5 p-2">Send Message</button>
+        </form>
+        
+        <!-- <h2>Contact Me</h2>
+            <p type="Name:"><input placeholder="Write your name here.."></p>
+            <p type="Email:"><input placeholder="Let us know how to contact you back.."></p>
+            <p type="Message:"><input placeholder="What would you like to tell us.."></p>
+            <button>Send Message</button> -->
+        </main>
+        
+        <footer class="d-flex flex-row justify-content-evenly align-center">
+            <p>Sofia Maria Victoria Menichelli &copy; | 2021</p>
+            <div class="me-2 d-flex flex-row align-center">
+                <a href="https://wa.me/542915205427" target="_blank">
+                    <span><i class="fa fa-phone"></i> +54 291 5205427</span>
+                </a>
+                <a href="mailto:smenichelli@hotmail.com" target="_blank">
+                    <span><i class="fa fa-envelope-o"></i> smenichelli@hotmail.com</span>
+                </a>
+            </div> 
+        </footer>
 
-        <div id="contacto" class="contacto">
-            <form action="">
-                <legend></legend>
-                <label for=""><input type="text">Nombre</label>
-                <label for=""><input type="text">Apellido</label>
-                <label for=""><input type="phone">Telefono</label>
-                <label for=""><input type="text">Mensaje</label>
-            </form>
-        </div>
-
-    </main>
-    <footer>
-        <p>Sofia Maria Victoria Menichelli &copy;</p>
-        <!-- <div class="social-buttons">
-            <a href="#" class="social-button linkedin"><i class="fa fa-linkedin"></i></a>
-            <a href="#" class="social-button github"><i class="fa fa-github"></i></a>
-            <a href="#" class="social-button instagram"><i class="fa fa-instagram"></i></a>
-        </div> -->
-    </footer>
+    <!-- Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script src="main.js"></script>
 </body>
 </html>
